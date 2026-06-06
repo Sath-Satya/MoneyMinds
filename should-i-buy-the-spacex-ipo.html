@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Should I Buy the SpaceX IPO?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,600&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#f5f0e6;
+    --paper:#fbf7ef;
+    --charcoal:#211e1a;
+    --ink:#2d2924;
+    --muted:#6c6256;
+    --line:#dccfb8;
+    --orange:#bf551d;
+    --orange-deep:#9a4114;
+    --green:#4d6f48;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'IBM Plex Sans',sans-serif;
+    line-height:1.72;
+    font-size:18.5px;
+    -webkit-font-smoothing:antialiased;
+    background-image:
+      radial-gradient(circle at 88% 4%, rgba(191,85,29,.045), transparent 40%),
+      radial-gradient(circle at 6% 96%, rgba(77,111,72,.045), transparent 42%);
+  }
+  .wrap{max-width:730px;margin:0 auto;padding:0 26px}
+
+  header.mast{padding:64px 0 0}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.3em;
+    text-transform:uppercase;color:var(--orange);font-weight:500;margin-bottom:24px;
+  }
+  h1{
+    font-family:'Fraunces',serif;font-weight:600;
+    font-size:clamp(2.6rem,7vw,4.4rem);line-height:.98;
+    letter-spacing:-.02em;color:var(--charcoal);margin-bottom:22px;
+  }
+  .dek{
+    font-family:'Fraunces',serif;font-style:italic;font-weight:400;
+    font-size:clamp(1.15rem,2.6vw,1.5rem);line-height:1.45;color:var(--ink);
+    max-width:54ch;
+  }
+  .meta{
+    display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+    margin:34px 0 8px;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--muted);letter-spacing:.02em;
+  }
+  .meta .who{color:var(--charcoal);font-weight:500}
+  .meta .dot{width:4px;height:4px;border-radius:50%;background:var(--orange)}
+
+  article{padding:18px 0 0}
+  article p{margin-bottom:22px}
+  article p.lead{font-size:1.06em}
+  article p.lead::first-letter{
+    font-family:'Fraunces',serif;font-weight:600;float:left;
+    font-size:4.1rem;line-height:.74;padding:8px 12px 0 0;color:var(--orange-deep);
+  }
+  a{color:var(--orange-deep);text-decoration:underline;text-underline-offset:2.5px;text-decoration-thickness:1px;text-decoration-color:rgba(154,65,20,.4)}
+  a:hover{text-decoration-color:var(--orange-deep)}
+  strong{font-weight:600;color:var(--charcoal)}
+  em{font-style:italic}
+
+  h2{
+    font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.6rem,4vw,2.1rem);
+    line-height:1.08;letter-spacing:-.01em;color:var(--charcoal);
+    margin:52px 0 18px;
+  }
+  h2 .num{
+    display:block;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;
+    letter-spacing:.25em;color:var(--orange);margin-bottom:10px;
+  }
+
+  blockquote{
+    margin:34px 0;padding:4px 0 4px 26px;border-left:3px solid var(--orange);
+    font-family:'Fraunces',serif;font-style:italic;font-size:1.42rem;line-height:1.42;color:var(--charcoal);
+  }
+
+  .figbox{
+    margin:30px 0;padding:24px 26px;background:var(--paper);
+    border:1px solid var(--line);border-radius:7px;
+    box-shadow:0 14px 34px -26px rgba(33,30,26,.4);
+  }
+  .figbox .ttl{
+    font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--orange);font-weight:500;margin-bottom:16px;
+  }
+  .figrow{display:flex;gap:16px;align-items:baseline;padding:9px 0;border-bottom:1px dotted var(--line)}
+  .figrow:last-child{border-bottom:none}
+  .figrow .v{font-family:'Fraunces',serif;font-weight:600;font-size:1.45rem;color:var(--orange-deep);min-width:118px;line-height:1}
+  .figrow .l{font-size:14.5px;line-height:1.4;color:var(--ink)}
+
+  .loop{
+    margin:30px 0;padding:22px 24px;background:var(--charcoal);color:var(--cream);border-radius:7px;
+    font-family:'IBM Plex Mono',monospace;font-size:13.5px;line-height:1.95;
+  }
+  .loop b{color:#e8a06b;font-weight:500}
+  .loop .a{color:#9b9183}
+
+  hr.div{border:none;border-top:1px solid var(--line);margin:48px 0;width:46%}
+
+  .signoff{
+    margin:50px 0 0;padding:26px 0 0;border-top:2px solid var(--charcoal);
+    font-size:16px;line-height:1.6;color:var(--muted);
+  }
+  .signoff strong{color:var(--charcoal)}
+  footer{padding:40px 0 80px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);line-height:1.7}
+
+  @media(max-width:560px){
+    body{font-size:17.5px}
+    .figrow{flex-direction:column;gap:2px}
+    .figrow .v{min-width:0}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="mast">
+    <div class="eyebrow">Field Notes · Markets &amp; Technology</div>
+    <h1>Should I Buy the SpaceX IPO?</h1>
+    <p class="dek">A friend asked me a simple question. A few weeks of digging later, I’m not sure the question was simple at all — and what I found is worth sharing.</p>
+    <div class="meta">
+      <span class="who">Satya</span>
+      <span class="dot"></span>
+      <span>June 2026</span>
+      <span class="dot"></span>
+      <span>~9 min read</span>
+    </div>
+  </header>
+
+  <article>
+
+    <p class="lead">A buddy of mine — the kind of guy who has built real wealth in real estate and knows exactly what he doesn’t know about tech — texted me a few weeks ago. “Hey, can a regular person get in on the SpaceX, Anthropic, and ChatGPT IPOs? Worth it?” Reasonable question. Three of the most famous companies on earth, all going public at roughly the same moment. I figured I’d spend twenty minutes, send him a clean answer, move on.</p>
+
+    <p>I did not move on. The deeper I went, the more I realized the interesting story isn’t whether these companies are good. It’s the plumbing underneath the listings — a set of quiet rule changes and accounting mechanics that, once you see them, you can’t unsee. So instead of a text back, he got an essay. Here’s the cleaned-up version, because I think more people should understand what’s actually happening before the opening bell rings.</p>
+
+    <p>Let me start with the scale, because the numbers alone are hard to hold in your head.</p>
+
+    <h2><span class="num">01 — The setup</span>The three biggest IPOs in history, stacked on top of each other</h2>
+
+    <p>SpaceX is going public on the Nasdaq under the ticker <strong>SPCX</strong>, targeting a valuation of about <strong>$1.77 trillion</strong> at $135 a share, raising roughly $75 billion. If it prices where it’s aiming, it’s the <a href="https://www.france24.com/en/technology/20260603-spacex-record-75-bn-stock-market-debut">largest IPO ever recorded</a> — it would shatter the record Saudi Aramco set in 2019. The roadshow is already underway and shares are expected to start trading in mid-June.</p>
+
+    <p>Right behind it: <strong>Anthropic</strong>, the company behind the Claude AI models, <a href="https://www.cnn.com/2026/06/01/tech/anthropic-ipo-filing">confidentially filed for its own IPO on June 1</a>, fresh off a funding round that valued it near <strong>$965 billion</strong>. And <strong>OpenAI</strong>, the maker of ChatGPT, has been <a href="https://finance.yahoo.com/news/anthropic-plans-ipo-early-2026-004854547.html">laying the groundwork</a> for a listing of its own that could approach $1 trillion. Three companies. Close to <strong>$4 trillion</strong> in combined value. Hitting the public market within a few months of each other.</p>
+
+    <p>CNBC called it a potential test of whether 2026 becomes “the most consequential IPO cycle since the dot-com era.” That framing stuck with me, because the dot-com comparison is exactly where this gets uncomfortable.</p>
+
+    <h2><span class="num">02 — The part nobody mentions</span>The rulebook was quietly rewritten first</h2>
+
+    <p>Here’s where my twenty minutes turned into a few weeks. To understand why this matters to <em>your</em> money — not just to billionaires — you have to understand how index funds work. Stick with me, this is the key.</p>
+
+    <p>When you own an S&amp;P 500 or Nasdaq-100 index fund (and if you have a 401(k), you almost certainly do), you’re not picking stocks. The fund mechanically buys whatever is <em>in</em> the index, in proportion to its size. So getting added to a major index isn’t a popularity contest — it’s a money cannon. The moment a company joins, hundreds of billions of dollars in passive funds are <em>forced</em> to buy it, whether the manager thinks it’s a good deal or not.</p>
+
+    <p>Now here’s the thing. Two rules used to stand between a company like SpaceX and that money cannon. And in March 2026, the Nasdaq <a href="https://www.ashurst.com/en/insights/nasdaq-proposes-new-fast-entry-rule-for-the-nasdaq-100-index/">changed both of them</a>, effective May 1 — weeks before these listings.</p>
+
+    <div class="figbox">
+      <div class="ttl">What changed — Nasdaq-100 “Fast Entry” rule</div>
+      <div class="figrow"><div class="v">3 mo → 15 days</div><div class="l">The waiting period before a new company can join the index dropped from roughly three months (in practice, often up to a year) to about 15 trading days.</div></div>
+      <div class="figrow"><div class="v">Float min: gone</div><div class="l">The old rule required at least 10% of shares to be publicly available. SpaceX plans to float only ~4–5%. Under the old rule, it wouldn’t have qualified. The minimum was eliminated.</div></div>
+      <div class="figrow"><div class="v">3× weight</div><div class="l">Low-float companies now get their index weight inflated up to three times their actual float — so a 5% float can be treated like 15%, forcing funds to buy more than the tradable supply would justify.</div></div>
+    </div>
+
+    <p>I want to be fair here: Nasdaq’s stated reasoning is defensible. Genuinely huge companies were being structurally locked out of an index meant to represent them, and the consultation had broad support. You can read the methodology change <a href="https://indexes.nasdaqomx.com/docs/2026_May_NDX_Changes_FAQ.pdf">straight from the source</a>. But the timing is the timing. A trading-research firm put it plainly when it noted that critics calling the changes a “grift” have <a href="https://spotgamma.com/spacex-ipo-index-changes-spotgamma/">a real point</a> — and it’s not just Nasdaq. S&amp;P and FTSE Russell are loosening their own rules in parallel.</p>
+
+    <blockquote>A handful of insiders got in early at low prices. To exit at these valuations, they need an enormous buyer. The rule changes quietly made your retirement account that buyer.</blockquote>
+
+    <p>That’s the uncomfortable mechanic. Not a conspiracy with a smoke-filled room — just incentives lining up a little too neatly.</p>
+
+    <h2><span class="num">03 — Is the rocket company actually worth it?</span>Three businesses wearing one price tag</h2>
+
+    <p>So I dug into SpaceX’s actual financials, which it disclosed publicly for the first time in its filing. Most people think “SpaceX” means rockets and Mars. It’s really three very different businesses bolted together, and the <a href="https://www.morningstar.com/stocks/6-charts-spacexs-s-1-financials">numbers tell a split story</a>.</p>
+
+    <div class="figbox">
+      <div class="ttl">SpaceX, by segment (2025)</div>
+      <div class="figrow"><div class="v">Starlink</div><div class="l">The engine. ~$11.4B revenue, ~$4.4B operating profit, ~63% margins, <a href="https://www.mostlymetrics.com/p/spacex-ipo-s1-breakdown">10.3M subscribers across 164 countries</a>. A genuinely great, scaled business.</div></div>
+      <div class="figrow"><div class="v">Rockets</div><div class="l">Launch and government contracts. Real, lower-margin, the part everyone pictures — but a minority of the revenue.</div></div>
+      <div class="figrow"><div class="v">xAI</div><div class="l">Elon’s AI company, merged in this year. Roughly $3.2B revenue against a <a href="https://www.bitmex.com/blog/spacex-ipo-guide">~$6.4B operating loss</a>. It burns more than a billion dollars a month.</div></div>
+    </div>
+
+    <p>Put it together and the picture flips. SpaceX was <em>profitable</em> on its own in 2024 — about $791 million in the black. After absorbing xAI, it posted a <strong>~$4.94 billion net loss</strong> on $18.7 billion in revenue in 2025. Starlink makes money. Rockets make money. xAI lights it on fire. You’re being asked to buy all of that bundled at the highest IPO valuation in human history.</p>
+
+    <p>And here’s a detail the headlines skip: Starlink’s revenue-per-user is actually <em>falling</em> — from around $99 a month to about $66 — as it expands into cheaper international markets. The growth is real, but it’s volume papering over softening unit economics. Morningstar, for what it’s worth, values the whole company at <a href="https://www.cnbc.com/2026/06/03/morningstar-spacex-ipo-target-price-nasdaq.html">about $780 billion — less than half</a> the IPO target.</p>
+
+    <h2><span class="num">04 — The mechanic that genuinely surprised me</span>The money is moving in a circle</h2>
+
+    <p>This is the part I’d want my friend to understand more than anything else, because it’s subtle and it’s real. The AI boom you’re reading about in the headlines — record profits, trillion-dollar valuations — is partly built on companies paying each other in a loop.</p>
+
+    <div class="loop">
+      A cloud giant <b>invests</b> billions in an AI lab <span class="a">→</span><br>
+      the lab <b>spends</b> that money renting the giant’s cloud <span class="a">→</span><br>
+      the giant <b>books</b> it as revenue, and marks up its stake as profit <span class="a">→</span><br>
+      uses those gains to <b>justify spending even more</b> <span class="a">→</span> repeat.
+    </div>
+
+    <p>These aren’t small deals. OpenAI expanded a $38 billion cloud agreement with Amazon by another $100 billion. It committed a quarter-trillion dollars to Microsoft’s Azure. Anthropic committed $30 billion to Azure while Microsoft and Nvidia put $15 billion <em>into</em> Anthropic. <a href="https://www.bloomberg.com/graphics/2026-ai-circular-deals/">Bloomberg mapped the whole web of it</a>, and together OpenAI and Anthropic now account for more than half of the roughly $2 trillion in future cloud commitments held by the big four cloud providers. To supporters, this is a “virtuous circle” locking in scarce computing power. To skeptics, it’s a hall of mirrors.</p>
+
+    <p>And then there’s the accounting piece, which is the real eye-opener. Because these cloud giants own equity stakes in the AI labs, every time a lab raises money at a higher valuation, the giant gets to record that paper gain as <em>profit</em>. In one recent quarter, a large share of both Alphabet’s and Amazon’s reported profit came from <a href="https://www.mexc.com/news/1109706">unrealized markups on their AI stakes</a> — gains where no cash actually changed hands. Amazon’s free cash flow in that same window reportedly collapsed by 95% as it poured tens of billions into data centers.</p>
+
+    <blockquote>Most bubbles show up in the price. This one might be hiding in the earnings.</blockquote>
+
+    <p>That’s the cleverest distinction I came across, and it’s worth slowing down on. In a normal bubble, prices detach from earnings and the price-to-earnings ratio screams at you. Here, the P/E ratios look <em>reasonable</em> — because the earnings themselves are being propped up by paper gains and circular revenue. An inflated bottom line makes everything look healthier than it is. We’ve seen that movie before, with bank and homebuilder earnings that looked pristine right up until 2008.</p>
+
+    <p>It’s not theoretical math, either. When the <a href="https://digg.com/ai/01vq5kvb">Financial Times modeled the returns</a> these companies are likely to earn on their massive AI spending — under the most generous, zero-cost assumptions possible — most of them came out <em>negative</em>. Microsoft, Google, Meta, and Oracle all underwater; only Amazon barely positive. That’s the best case.</p>
+
+    <h2><span class="num">05 — The backdrop</span>This is all happening on shaky ground</h2>
+
+    <p>If this were a calm year, maybe none of it would matter much. It is not a calm year. While I was researching, the macro picture kept getting heavier:</p>
+
+    <p>The <a href="https://www.fool.com/investing/2026/05/29/stock-market-trouble-trump-put-warsh-tough-spot/">Strait of Hormuz has been effectively closed</a> for about three months following the conflict with Iran — choking off roughly a fifth of the world’s oil supply. Inflation has reignited (CPI back up near 3.8%, gasoline up sharply), and analysts have floated oil running toward $150 a barrel if it drags on. Meanwhile, <a href="https://www.cnn.com/2026/05/22/economy/kevin-warsh-sworn-in-fed-chair">Kevin Warsh was just sworn in as the new Fed chair</a>, walking into a near-impossible bind: cut rates into an inflation spike and risk making it worse, or hold and raise borrowing costs right as a trillion dollars of debt-funded AI spending needs cheap money. Bond markets are already nervous.</p>
+
+    <p>None of these are predictions. They’re just the conditions these record-breaking listings are launching into.</p>
+
+    <h2><span class="num">06 — The thing my friend didn’t realize</span>You might already own this bet</h2>
+
+    <p>Here’s what stopped me cold, and what I think most people miss. My friend asked how to <em>buy in</em>. But if he owns a standard index fund, he’s already all-in.</p>
+
+    <p>AI-related stocks now make up somewhere between <a href="https://cryptobriefing.com/sp500-ai-stocks-142-percent-gain-concentration/">45% and 50% of the entire S&amp;P 500</a> by value. J.P. Morgan flagged that the <a href="https://markets.financialcontent.com/stocks/article/marketminute-2026-1-26-the-fragile-fifty-percent-jp-morgan-warns-of-systemic-tipping-point-as-s-and-p-500-concentration-hits-record-highs">top 20 companies alone are about 51%</a> of the index — a concentration higher than the dot-com peak. The market keeps hitting record highs, but strip out the AI names and the other ~480 companies are basically flat. The index is being carried by a handful of giants, and within weeks those giants will be joined by the biggest IPOs in history.</p>
+
+    <p>So when people say “just buy the index, it’s diversified” — that’s less true than it used to be. Roughly half of that “diversified” fund is now a single thematic bet on artificial intelligence. That’s not necessarily wrong. But you should at least know it’s the bet you’re making.</p>
+
+    <hr class="div">
+
+    <h2><span class="num">07 — So what did I tell him?</span>Technology winning and investors winning are two different things</h2>
+
+    <p>Here’s the part I keep coming back to, because history is weirdly clear on it. In the late 1800s, the railroads transformed America. The technology absolutely won — the rails are still here. But most of the investors who funded the boom got wiped out; the fortunes were made later by people who bought the assets out of bankruptcy. Same story with the fiber-optic cable boom of the 1990s: the companies that laid the cable went bust in the dot-com crash, and a decade later that very fiber became the backbone of the internet you’re reading this on.</p>
+
+    <p>I think AI is real. I build with these tools every day; they’re changing how I work. Starlink is one of the most impressive things built this decade. But “the technology will change the world” and “the people buying at a $1.77 trillion valuation will be rewarded” are two completely separate claims — and only the first one is obviously true.</p>
+
+    <p>So here’s what I actually told my friend, and it wasn’t a yes or a no. <strong>First: know what you already own.</strong> Before chasing a new IPO, understand that your existing index funds are about to hold these companies automatically, at whatever price the market sets on day one. <strong>Second: the “guaranteed” buying is real but it’s bounded</strong> — fast-entry only applies to the very largest names, and the weighting is capped. <strong>And third: nobody actually knows how this ends.</strong> Maybe the listings go great and the boom justifies itself. Maybe it’s 2000 in slow motion. The job isn’t to be right about which — it’s to size your bets so you survive being wrong.</p>
+
+    <p>That’s a less exciting answer than “yes, get rich” or “no, it’s all a scam.” But it’s the honest one. And honestly, the rabbit hole was worth it — I understand the machine a lot better now than I did when that text came in.</p>
+
+    <div class="signoff">
+      <p><strong>One caveat, clearly stated:</strong> I’m a technologist, not a financial advisor, and none of this is investment advice. It’s me sharing the trail I followed and the sources I used so you can check the facts yourself and reach your own conclusions. Every figure here was accurate as of writing; these deals are moving fast, so verify before you act on anything.</p>
+      <p style="margin-top:14px">If you found this useful, the most valuable thing you can do is the same thing I did — follow the links, read the primary sources, and think for yourself. That’s the whole point.</p>
+    </div>
+
+  </article>
+
+  <footer>
+    Sources linked throughout · Nasdaq Index Methodology · France 24 · CNN · CNBC · Reuters/Yahoo Finance · Morningstar · MostlyMetrics · BitMEX · Bloomberg · Financial Times · J.P. Morgan · Motley Fool. Figures current as of June 2026.
+  </footer>
+
+</div>
+</body>
+</html>
